@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center" #box>
+            <h3>User Name is <strong>{{usernaame}}</strong></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" style="background: #4ef0c7;
+        padding: 88px;">
+            <button (click)="getChildProperty()">get child property</button>
+            <button (click)="callChildMethod()">call child method</button>
+        </div>
+        <div class="col-sm-6" style="background: #f0ad4e;
+        padding: 88px;
+        text-align: center;">
+            <app-comp6>
+                <p #childCon> this is child content paragraph</p>
+            </app-comp6>
+        </div>
+    </div>
+</div>

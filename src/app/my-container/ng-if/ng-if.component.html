@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>*ngIf</h2>
+    <div class="btn btn-primary" (click)="showBlock()">click me</div>
+    <br/>
+
+    <div *ngIf="isValid; then thenblock else elseblock"></div>
+        <ng-template #thenblock> Block is shown</ng-template>
+        <ng-template #elseblock> Please click to show the block</ng-template>
+</div>

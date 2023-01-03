@@ -1,0 +1,6 @@
+<label>Child Compnent</label>
+<div class="col-md-12 bg-success text-white text-center py-4">
+    <h2 *ngIf="!productSelected">Please select any product</h2>
+    <h2 *ngIf="productSelected">{{selectedProduct}} is selected</h2>
+    <button class="btn btn-primary" (click)="addTOCart()">Add to Cart</button>
+</div>

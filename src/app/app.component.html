@@ -1,0 +1,40 @@
+
+<!-- <app-my-container></app-my-container> -->
+
+<div class="block right">
+    <div class="lang-change">
+        <ul>
+            <li>
+                <a [class.active]="switchLang=='de'" (click)="selectedLang('de')">DE</a>
+            </li>
+            <li>
+                <a  [class.active]="switchLang=='en'" (click)="selectedLang('en')">EN</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<header>
+    <nav>
+        <ul class="nav nav-tab">
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  routerLink="home">Subject & Behaviour Subject</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="about">About</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="features">Feature</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="docs">Docs</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="blogs">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="buy-products">Component communication</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="hooks">Angular Hooks</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="viewchild">View Child</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="contentchild">Content Child</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="hostlistner">HostListner</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="hostbinding">HostBinding</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="filter">Filter Pipe</a></li>
+
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="assigment">Assigment</a></li>
+            <li class="nav-item"><a class="nav-link active" routerLinkActive="active" routerLink="orders">Order</a></li>
+            
+
+        </ul>
+    </nav>
+</header>
+<router-outlet></router-outlet>

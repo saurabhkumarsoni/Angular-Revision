@@ -1,0 +1,105 @@
+<div class="container">
+    <h2>*ngFor</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Department</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let emp of employees">
+                    <th scope="row">{{emp?.id}}</th>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.mobile}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.salary}}</td>
+                    <td>{{emp.department}}</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+    </div>
+<hr/>
+    <h2>*ngFor with push and splice</h2>
+    <button class="btn btn-sm btn-primary btn-class" (click)="addRow()">Add</button>
+    <div class="row">
+      
+
+        
+<table >
+    <thead>
+    <tr>
+      <td><label>Name</label></td>
+      <td><label>Mobile</label></td>
+      <td><label>Email</label></td>
+      <td><label>Salary</label></td>
+      <td><label>Action</label></td>
+    
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let dynamic of dynamicArray; let i = index;">
+      
+      <td>
+        <div class="form-group">
+        <input class="form-control"  name="{{dynamic.name}}" placeholder="enter name" [(ngModel)]="dynamic.name"  type="text" />
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+        <input class="form-control"  name="{{dynamic.mobile}}" placeholder="enter mobile" [(ngModel)]="dynamic.mobile"  type="text" />
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+        <input class="form-control"  name="{{dynamic.email}}" placeholder="enter email" [(ngModel)]="dynamic.email"  type="text" />
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+        <input class="form-control"  name="{{dynamic.salary}}" placeholder="enter salary" [(ngModel)]="dynamic.salary"  type="text" />
+        </div>
+      </td>
+      <td>
+        <button class="btn btn-danger btn-s"  (click)="deleteItem(i)">-</button>
+
+      </td> 
+    </tr>
+    
+    </tbody>
+    </table>
+        
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Email</th>
+                <th scope="col">Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr formArrayName="empAddition" *ngFor="let item of dynamicArray; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{item?.name}}</td>
+                <td>{{item.mobile}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.salary}}</td>
+              </tr>
+             
+            </tbody>
+          </table>
+    </div>
+
+</div>

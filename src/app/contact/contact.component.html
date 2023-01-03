@@ -1,0 +1,45 @@
+<h2>Parent</h2>
+<div class="row">
+    <div class="col-sm-5 parentBox">
+        <h2>User</h2>
+        <table width="100%">
+            <tr>
+                <th>User Name</th>
+                <th class="removeLink">Remove</th>
+            </tr>
+            <tr *ngFor="let user of users">
+                <td>{{user}}</td>
+            </tr>
+            
+        </table>
+    </div>
+    <div class="col-sm-5 parentBox">
+        <h2>Admin</h2>
+        <table width="100%">
+            <tr>
+                <th>User Name</th>
+                <th class="removeLink">Remove</th>
+            </tr>
+            <tr *ngFor="let admin of admins">
+                <td>{{admin}}</td>
+            </tr>
+           
+        </table>
+    </div>
+</div>
+
+<h2>Child</h2>
+<hr>
+<div class="row align-center">
+    <div class="col-sm-6">
+        <app-client [boxColor]="'red'"
+         [placeholderText]="'Create User'"
+         (inputEvent)="pushUsers($event)"></app-client>
+    </div>
+    <div class="col-sm-6">
+        <app-client [boxColor]="'green'" 
+        [placeholderText]="'Create Admin'"
+        (inputEvent)="pushAdmin($event)"></app-client>
+    </div>
+    
+</div>

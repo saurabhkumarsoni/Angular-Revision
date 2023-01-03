@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 mb-5 text-center mt-5">
+            <input type="text" class="form-control mb-2" placeholder=" input here..." #val>
+            <button class="btn btn-primary" (click)="submitValue(val)">Submit Value</button>
+    
+        </div>
+
+        <app-comp5 [myValue]="value"> ng content <strong> {{value}}</strong></app-comp5>
+    </div>
+</div> 
